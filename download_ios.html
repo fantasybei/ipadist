@@ -1,0 +1,298 @@
+<html lang="en" style="font-size: 50px;"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>V聊-邂逅网红·遇见大V</title>
+<link rel="stylesheet" href="./app.min.css"><style>
+    html,
+    body,
+    div,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    ol,
+    ul,
+    li,
+    img {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+
+    .main:after {
+        content: "";
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        background: #FF4089;
+    }
+
+    .main {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: none;
+    }
+
+    .logo {
+        width: 1.06rem;
+        height: 0.49rem;
+        position: fixed;
+        left: 0.46rem;
+        top: 0.4rem;
+    }
+
+    .line {
+        position: fixed;
+        width: 6.7rem;
+        height: 1px;
+        background: rgba(255, 255, 255, 0.3);
+        top: 1.29rem;
+        left: 0.4rem;
+    }
+
+    .ball {
+        width: 6.54rem;
+        height: 5.68rem;
+        display: block;
+        position: absolute;
+        left: 1.75rem;
+        top: 4rem;
+        transition: top 1.2s;
+        z-index: 2;
+        transform: translateZ(0);
+        -webkit-transform: translateZ(0);
+    }
+
+    .girls {
+        width: 6.76rem;
+        height: 3.95rem;
+        position: absolute;
+        top: 4.5rem;
+        left: 0.37rem;
+        z-index: 1;
+        display: block;
+        transition: top 0.8s;
+        z-index: 1;
+        transform: translateZ(0);
+        -webkit-transform: translateZ(0);
+    }
+
+    .h4 {
+        position: fixed;
+        top: 6.92rem;
+        width: 100%;
+        text-align: center;
+        font-size: 0.76rem;
+        line-height: 0.76rem;
+        font-weight: bold;
+        color: rgba(255, 255, 255, 1);
+    }
+
+    .text {
+        position: fixed;
+        top: 8.13rem;
+        width: 100%;
+        font-size: 0.32rem;
+        color: rgba(255, 255, 255, 1);
+        line-height: 0.32rem;
+        text-align: center;
+    }
+
+    .btn {
+        position: absolute;
+        display: block;
+        top: 9.32rem;
+        left: 2.31rem;
+        width: 2.88rem;
+        height: 0.91rem;
+        background: rgba(255, 255, 255, 1);
+        border-radius: 0.45rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: rgba(35, 35, 35, 1);
+        font-size: 0.32rem;
+    }
+
+    .mask {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, .6);
+        z-index: 250;
+        display: none;
+    }
+
+    .tishixiazai {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1000;
+        display: none;
+    }
+
+    .tishixiazai img {
+        width: 100%;
+    }
+
+    .alert-box {
+        position: absolute;
+        width: 86%;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        background: #f9f9f9;
+        height: auto;
+        padding: 3%;
+        border-radius: .066667rem;
+        -webkit-transition: all .3s;
+        -o-transition: all .3s;
+        -moz-transition: all .3s;
+        transition: all .3s;
+    }
+
+    .now-download {
+        width: 100%;
+        color: #999;
+        margin-bottom: .263333rem;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .close-btn {
+        width: 0.5rem;
+        height: 0.5rem;
+        position: absolute;
+        right: 3%;
+        top: 2%;
+        z-index: 3;
+        background: url(https://res.xdlfkh.cn/lmmy/images/c_lose.png) no-repeat center;
+        background-size: 100% auto;
+        display: block;
+    }
+
+    .change {
+        width: 80%;
+        margin: 2% 0 0 10%;
+        background: #0093ff;
+        text-align: center;
+        height: 0.8rem;
+        line-height: 0.8rem;
+        color: #fff;
+        border-radius: .1rem;
+        font-size: 14px;
+        text-decoration: none;
+        display: none;
+    }
+
+    .alert-btn {
+        z-index: 10;
+        width: 100%;
+        margin: .133333rem auto;
+        height: .213333rem;
+        line-height: .213333rem;
+        background: #b8b8b8;
+        position: relative;
+        border-radius: .133333rem;
+    }
+
+    .top-bar {
+        z-index: 15;
+        background: #0093ff;
+        width: 1%;
+    }
+
+    .color-bar {
+        z-index: 12;
+        position: absolute;
+        width: 0;
+        height: 100%;
+        left: 0;
+        top: 0;
+        text-align: center;
+        border-radius: .133333rem;
+    }
+
+    .buttom-bar {
+        background: #b8b8b8;
+    }
+</style></head>
+
+
+
+<body>
+<div class="main" style="display: block;">
+    <!-- <img src="./images/logo.png?a1" class="logo"> -->
+    <p class="line"></p>
+    <img src="./ball.png?a1" class="ball" style="top: 0.4rem;">
+    <img src="./girls.png?a1" class="girls" style="top: 2.18rem;">
+    <h4 class="h4">高颜值 视频社交</h4>
+    <p class="text">与网红大V亲密接触</p>
+    <a class="btn down download_lct" href="itms-services://?action=download-manifest&amp;url=https://dist.vchatcps.com/ios/download.plist">下载V聊</a>
+</div>
+
+
+<script src="https://hm.baidu.com/hm.js?284f32e0e21303823dd01dbbb10eca8d"></script><script src="./jquery.2.1.4.min.js?t=201901101317"></script>
+<script src="./download.js"></script>
+<script>
+    window.onload = function () {
+        $('.main').css({display:'block'});
+        setTimeout(function () {
+            $('.ball').css({ 'top': '0.4rem' })
+            $('.girls').css({ 'top': '2.18rem' })
+        }, 100)
+    }
+
+    $('.fixedimg').click(function () {
+        $('.kefuerweima').show();
+    });
+    $('.ceng').click(function () {
+        $('.kefuerweima').hide();
+    })
+
+    var a1, a2;
+
+    $('#js_closeBtn2').click(function () {
+        $('#js_box2').hide()
+        $('#topbar').css({
+            "width": "0",
+            "transition": "none"
+        })
+        clearTimeout(a1)
+        clearTimeout(a2)
+    })
+</script>
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?284f32e0e21303823dd01dbbb10eca8d";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+<iframe id="si_mainframe" name="si_mainframe"></iframe></body></html>

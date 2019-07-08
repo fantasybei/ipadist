@@ -1,0 +1,315 @@
+html,body,div,p,a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none
+}
+
+:after,:before {
+    box-sizing: border-box
+}
+
+body {
+    font-family: "Avenir", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 0
+}
+
+html {
+    font-size: 50px
+}
+
+textarea {
+    resize: none
+}
+
+input,textarea {
+    -webkit-appearance: none;
+    outline: none;
+    box-sizing: border-box;
+    margin: 0
+}
+
+ul,ol {
+    list-style: none
+}
+
+img {
+    border: 0;
+    vertical-align: middle
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    color: inherit
+}
+
+button {
+    outline: none;
+    border: none
+}
+
+a:hover {
+    text-decoration: none
+}
+
+.tips-jump-down {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 10000;
+    background: rgba(0,0,0,0.5)
+}
+
+.tips-jump-down img {
+    width: 5.88rem;
+    height: 3.02rem;
+    position: absolute;
+    top: .49rem;
+    right: .32rem
+}
+
+.mask-down {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 10000;
+    background: rgba(0,0,0,0.5)
+}
+
+.mask-down p {
+    font-size: .31rem;
+    color: #505050;
+    text-align: center
+}
+
+.mask-down .logo {
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-top: .35rem;
+    margin-bottom: .23rem
+}
+
+.mask-down .dialog {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 5.43rem;
+    height: 4.49rem;
+    border-radius: .2rem;
+    background-color: #FFFFFF;
+    text-align: center
+}
+
+.mask-down .dialog .mask-close {
+    position: absolute;
+    right: .15rem;
+    top: .15rem;
+    width: .52rem;
+    height: .52rem
+}
+
+.mask-down .down {
+    display: inline-block;
+    width: 3.4rem;
+    height: .74rem;
+    color: #FFFFFF;
+    font-weight: 500;
+    font-size: .3rem;
+    line-height: .74rem;
+    background: linear-gradient(to right, #F64761, #FB6BCA);
+    border-radius: .37rem;
+    margin-top: .35rem
+}
+
+.mask-ios {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 10000;
+    background: rgba(0,0,0,0.5)
+}
+
+.mask-ios .box {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.mask-ios .box .dialog {
+    background-color: #FFFFFF;
+    width: 6rem;
+    border-radius: 3px;
+    padding: .2rem;
+    position: relative
+}
+
+.mask-ios .box .dialog .mask-ios-close {
+    position: absolute;
+    right: .15rem;
+    top: .15rem;
+    width: .52rem;
+    height: .52rem
+}
+
+.mask-ios .box .dialog .title {
+    color: #999;
+    font-size: .28rem;
+    display: inline-block;
+    padding-bottom: .1rem
+}
+
+.mask-ios .box .dialog .tips {
+    font-size: .24rem;
+    display: inline-block
+}
+
+.mask-ios .box .dialog .progress {
+    background: #b8b8b8;
+    position: relative;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    margin-top: .1rem;
+    overflow: hidden
+}
+
+.mask-ios .box .dialog .scale {
+    height: 100%;
+    width: 0;
+    background: #0093ff
+}
+
+.mask-ios .box .dialog .speed {
+    width: 100%;
+    transition: width 40s linear 0s
+}
+
+.mask-ios .box .dialog .cert {
+    display: none
+}
+
+.mask-ios .box .dialog .btncert {
+    height: .7rem;
+    margin: 0 auto;
+    width: 80%;
+    background: #0093ff;
+    font-size: .28rem;
+    color: #FFFFFF;
+    line-height: .7rem;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    margin-top: .16rem
+}
+
+.mask-ios .box .dialog .certname {
+    font-size: .24rem;
+    text-align: center;
+    padding-top: .1rem
+}
+
+.mask-ios .box .dialog .course {
+    width: 100%
+}
+
+@-webkit-keyframes bounceIn {
+    from,20%,40%,60%,80%,to {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1)
+    }
+
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(0.3, 0.3, 0.3);
+        transform: scale3d(0.3, 0.3, 0.3)
+    }
+
+    20% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1);
+        transform: scale3d(1.1, 1.1, 1.1)
+    }
+
+    40% {
+        -webkit-transform: scale3d(0.9, 0.9, 0.9);
+        transform: scale3d(0.9, 0.9, 0.9)
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: scale3d(1.03, 1.03, 1.03);
+        transform: scale3d(1.03, 1.03, 1.03)
+    }
+
+    80% {
+        -webkit-transform: scale3d(0.97, 0.97, 0.97);
+        transform: scale3d(0.97, 0.97, 0.97)
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1)
+    }
+}
+
+@keyframes bounceIn {
+    from,20%,40%,60%,80%,to {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1)
+    }
+
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(0.3, 0.3, 0.3);
+        transform: scale3d(0.3, 0.3, 0.3)
+    }
+
+    20% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1);
+        transform: scale3d(1.1, 1.1, 1.1)
+    }
+
+    40% {
+        -webkit-transform: scale3d(0.9, 0.9, 0.9);
+        transform: scale3d(0.9, 0.9, 0.9)
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: scale3d(1.03, 1.03, 1.03);
+        transform: scale3d(1.03, 1.03, 1.03)
+    }
+
+    80% {
+        -webkit-transform: scale3d(0.97, 0.97, 0.97);
+        transform: scale3d(0.97, 0.97, 0.97)
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1)
+    }
+}
+
+.bounceIn {
+    -webkit-animation-duration: 0.75s;
+    animation-duration: 0.75s;
+    -webkit-animation-name: bounceIn;
+    animation-name: bounceIn
+}
